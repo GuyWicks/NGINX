@@ -1,0 +1,2 @@
+# NGINX
+NGINX common configuration 
