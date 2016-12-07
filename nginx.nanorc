@@ -1,0 +1,30 @@
+syntax "Nginx" "nginx.*\.conf$" "\.nginx$" "\.site$"
+#header "^(server|upstream)[a-z ]*\{$"
+
+color brightmagenta     "\<(events|server|http|location|upstream)[[:space:]]*\{"
+
+color cyan              "(^|[[:space:]{;])(access_log|add_after_body|add_before_body|add_header|addition_types|aio|alias|allow|ancient_browser|$
+color cyan              "(^|[[:space:]{;])(zone|least_time|least_conn|ntlm|health_check|match|sticky|queue|hash|state)([[:space:]]|$)"
+color cyan              "(^|[[:space:]{;])(internal|backup|header)|$)"
+color cyan              "[a-zA-Z\-\_]+="
+
+color magenta           "(^|[[:space:]{;])(shib_request|shib_request_use_headers)([[:space:]]|$)"
+
+color brightcyan        "\<(on|off)\>"
+color brightyellow      "\$[A-Za-z][A-Za-z0-9_]*"
+
+color red               "[*]"
+color yellow            "[[:digit:]]+[kKmMgGsS]"
+color yellow            "=[[:digit:]]+"
+color yellow            "[[:space:]][[:digit:]]+"
+color yellow            "[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+\.[[:digit:]]+"
+color yellow            ":[[:digit:]]+"
+
+color yellow            ""(\\.|[^"])*"|'(\\.|[^'])*'"
+color yellow            start="'$" end="';$"
+#color magenta           start="://" end=";$"
+color white               start="@" end="(;$|\{)"
+color magenta           "(http://|https://)"
+color brightgreen       "(^|[[:space:]])#([^{].*)?$"
+color ,green            "[[:space:]]+$"
+#color ,red "    + +| +  +"
