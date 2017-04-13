@@ -1,0 +1,27 @@
+<html>
+<!--# include file="/config/head.html" -->
+
+<body>
+<!--# include file="/config/topnav.html" -->
+
+<div class="w3-container w3-padding-64">
+<h2><!--# echo var="inc" --></h2>
+
+
+<!--# if expr="$inc != /config/home/" -->
+
+    <pre>
+    <code class="language-nginxplus language-nginx">
+<!--# include file="$inc.html" -->
+    </code>
+    </pre>
+
+<!--# else -->
+
+    <!--# include file="$inc.html" -->
+
+<!--# endif -->
+
+
+</body>
+</html>
