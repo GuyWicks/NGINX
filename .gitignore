@@ -2,7 +2,7 @@
 # Exclude NGINX config files
 # Use rebuild.sh to reconstruct
 #
-/common
-/map
-/sites
+/common/*.html
+/map/*.html
+/sites/*.html
 full_config.txt
