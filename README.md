@@ -1,2 +1,4 @@
 # NGINX
-NGINX common configuration 
+NGINX configuration viewer
+
+Work in progress

@@ -43,4 +43,4 @@ alias ngupstream='sudo nano /etc/nginx/conf.d/upstream.conf && ngtest'
 alias ngwww='cd /var/www/html'
 #
 # Web testing
-alias wwwbluktest='xargs -n1 -P 10 curl -o /dev/null --silent --write-out "%{http_code};%{time_total};%{time_namelookup};%{time_connect};%{size_download};%{speed_download};%{url_effective};\n" < wwwbluk-sitelist | column -s ";" -t | grep -v "^200\|^301\|^302"'
+alias webtest='xargs -n1 -P 10 curl -o /dev/null --silent --write-out "%{http_code};%{time_total};%{time_namelookup};%{time_connect};%{size_download};%{speed_download};%{url_effective};\n" < wwwbluk-sitelist | column -s ";" -t | grep -v "^200\|^301\|^302"'
